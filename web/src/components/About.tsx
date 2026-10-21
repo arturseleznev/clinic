@@ -30,10 +30,6 @@ export function About() {
               <span className="fact-card__value">9:00–17:00</span>
               <span className="fact-card__label">Пн–Пт</span>
             </article>
-            <article className="fact-card fact-card--accent">
-              <span className="fact-card__value">По записи</span>
-              <span className="fact-card__label">Позднее время</span>
-            </article>
           </div>
         </div>
       </div>

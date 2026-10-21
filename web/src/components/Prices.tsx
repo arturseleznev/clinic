@@ -15,7 +15,7 @@ export function Prices() {
       <div className="container">
         <header className={`section-header ${visible ? 'is-visible' : ''}`}>
           <p className="section-eyebrow">Цены</p>
-          <h2 className="section-title">Прозрачная стоимость услуг</h2>
+          <h2 className="section-title">Прайс-лист услуг</h2>
           <p className="section-desc">{clinic.priceNote}</p>
         </header>
 
