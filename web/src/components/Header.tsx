@@ -57,7 +57,12 @@ export function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''} ${menuOpen ? 'header--menu-open' : ''}`}>
       <div className="header__inner container">
-        <Link to="/" className="header__brand" aria-label="На главную">
+        <Link
+          to="/"
+          className="header__brand"
+          aria-label="На главную"
+          onClick={() => setMenuOpen(false)}
+        >
           <img src={assetUrl('/images/logo.png')} alt="" className="header__logo" />
           <span className="header__brand-text">{clinic.shortName}</span>
         </Link>
@@ -94,7 +99,11 @@ export function Header() {
         className={`header__mobile ${menuOpen ? 'header__mobile--open' : ''}`}
         aria-hidden={!menuOpen}
       >
-        <div className="header__mobile-backdrop" aria-hidden="true" />
+        <div
+          className="header__mobile-backdrop"
+          aria-hidden="true"
+          onClick={() => setMenuOpen(false)}
+        />
         <div className="header__mobile-panel">
           <nav aria-label="Мобильная навигация">
             <ul className="header__mobile-list">

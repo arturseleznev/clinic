@@ -15,8 +15,8 @@ export function Hero() {
         <div className={`hero__content ${visible ? 'is-visible' : ''}`}>
           <p className="hero__eyebrow">Стоматология в Ульяновске</p>
           <h1 className="hero__title">
-            Стоматологическая клиника
-            <em> доктора Селезнёвой</em>
+            Стоматологическая клиника{' '}
+            <em>доктора Селезнёвой</em>
           </h1>
           <p className="hero__lead">
             Мы рады вас приветствовать. Душевный подход, внимание к каждому
