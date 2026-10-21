@@ -147,15 +147,6 @@ textarea:focus-visible {
   box-shadow: 0 10px 30px rgba(37, 107, 122, 0.25);
   text-align: center;
   line-height: 1.2;
-  transition:
-    transform 0.25s var(--ease),
-    background 0.25s var(--ease),
-    box-shadow 0.25s var(--ease);
-}
-
-.book-call:hover {
-  transform: translateY(-1px);
-  background: var(--teal-deep);
 }
 
 .book-call__label {
@@ -171,13 +162,15 @@ textarea:focus-visible {
   font-weight: 700;
   color: inherit;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.2s var(--ease);
 }
 
-.book-call__phone:hover {
-  color: inherit;
-  border-bottom-color: rgba(255, 255, 255, 0.55);
+/* Desktop: static badge (no hover / no tap-to-call) */
+.book-call__phone--static {
+  display: inline;
+}
+
+.book-call__phone--link {
+  display: none;
 }
 
 .book-call--sm {
@@ -198,12 +191,31 @@ textarea:focus-visible {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
-.book-call--on-dark:hover {
-  background: #fff;
-}
+/* Mobile: clickable phone + light press feedback */
+@media (max-width: 959px) {
+  .book-call {
+    transition:
+      transform 0.25s var(--ease),
+      background 0.25s var(--ease),
+      box-shadow 0.25s var(--ease);
+  }
 
-.book-call--on-dark .book-call__phone:hover {
-  border-bottom-color: rgba(37, 107, 122, 0.45);
+  .book-call:active {
+    transform: translateY(1px);
+    background: var(--teal-deep);
+  }
+
+  .book-call__phone--static {
+    display: none;
+  }
+
+  .book-call__phone--link {
+    display: inline;
+  }
+
+  .book-call--on-dark:active {
+    background: #fff;
+  }
 }
 
 /* Section typography */
