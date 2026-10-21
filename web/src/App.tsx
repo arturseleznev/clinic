@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import { HomePage } from './pages/HomePage'
-import { WorksPage } from './pages/WorksPage'
 
 const routerBasename = import.meta.env.BASE_URL.replace(/\/$/, '')
 function ScrollToHash() {
@@ -26,12 +25,12 @@ function ScrollToHash() {
 
 export default function App() {
   return (
-    <BrowserRouter basename={routerBasename || undefined}>      <ScrollToHash />
+    <BrowserRouter basename={routerBasename || undefined}>
+      <ScrollToHash />
       <Header />
       <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/works" element={<WorksPage />} />
         </Routes>
       </main>
       <Footer />

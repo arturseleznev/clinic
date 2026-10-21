@@ -1,5 +1,3 @@
-import { assetUrl } from '../lib/assets'
-
 export const clinic = {
   name: 'Стоматологическая клиника доктора Селезнёвой',
   shortName: 'Доктор Селезнёва',
@@ -25,7 +23,6 @@ export const navItems = [
   { label: 'Преимущества', href: '/#advantages' },
   { label: 'Услуги', href: '/#services' },
   { label: 'Цены', href: '/#prices' },
-  { label: 'Наши работы', href: '/works' },
 ]
 
 export const advantages = [
@@ -44,6 +41,12 @@ export const advantages = [
     text: 'Помогает быстро уточнить диагноз и проводить контроль после проведённого лечения.',
     icon: '○',
   },
+  {
+    title: 'Лечение под микроскопом',
+    text: 'Позволяет проводить лечение даже в самых сложных случаях.',
+    icon: '●',
+  }
+
 ]
 
 export const services = [
@@ -51,7 +54,6 @@ export const services = [
     title: 'Лечение',
     items: [
       'Цифровой рентген',
-      'Лечение под микроскопом',
       'Лечение кариеса пломбировочными материалами светового отверждения',
       'Лечение и перелечивание корневых каналов любой сложности',
       'Извлечение из корневых каналов сломанных инструментов'
@@ -115,16 +117,5 @@ export const prices = [
       'Удаление новообразований — от 2 500 ₽',
       'Удаление инородных тел — от 1 500 ₽'
     ],
-  },
-]
-
-export const portfolioPreview = [
-  {
-    title: 'Виниры',
-    image: assetUrl('/images/veneers-01.webp'),
-  },
-  {
-    title: 'Профессиональная гигиена',
-    image: assetUrl('/images/hygiene-after.webp'),
   },
 ]

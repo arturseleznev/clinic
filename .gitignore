@@ -13,3 +13,8 @@ dist/
 Thumbs.db
 .vscode/
 .idea/
+
+# Local agent 
+.agents/
+skills-lock.json
+DEPLOY.md
