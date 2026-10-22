@@ -9,15 +9,28 @@ function ScrollToHash() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
-    if (hash) {
-      const id = hash.replace('#', '')
+    if (!hash) {
+      window.scrollTo(0, 0)
+      return
+    }
+
+    const id = hash.replace('#', '')
+    let attempts = 0
+    let frame = 0
+
+    const tryScroll = () => {
       const el = document.getElementById(id)
       if (el) {
         el.scrollIntoView({ behavior: 'smooth' })
         return
       }
+      if (attempts++ < 40) {
+        frame = window.setTimeout(tryScroll, 50)
+      }
     }
-    window.scrollTo(0, 0)
+
+    tryScroll()
+    return () => window.clearTimeout(frame)
   }, [pathname, hash])
 
   return null

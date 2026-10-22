@@ -2,17 +2,20 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="%BASE_URL%images/logo.png" />
+    <link rel="icon" type="image/png" href="%BASE_URL%images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Стоматологическая клиника доктора Селезнёвой в Ульяновске. Лечение, протезирование, имплантация."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="image"
+      href="%BASE_URL%images/hero.webp"
+      type="image/webp"
+      imagesrcset="%BASE_URL%images/hero-800.webp 800w, %BASE_URL%images/hero.webp 1600w"
+      imagesizes="(max-width: 899px) 100vw, 55vw"
+      fetchpriority="high"
     />
     <title>Стоматологическая клиника доктора Селезнёвой — Стоматология в Ульяновске</title>
   </head>

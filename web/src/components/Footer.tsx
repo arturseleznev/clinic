@@ -7,7 +7,18 @@ export function Footer() {
       <div className="container footer__inner">
         <div className="footer__main">
           <div className="footer__brand">
-            <img src={assetUrl('/images/logo.png')} alt="" className="footer__logo" />
+            <picture>
+              <source type="image/webp" srcSet={assetUrl('/images/logo.webp')} />
+              <img
+                src={assetUrl('/images/logo.png')}
+                alt=""
+                className="footer__logo"
+                width={72}
+                height={72}
+                decoding="async"
+                loading="lazy"
+              />
+            </picture>
             <p>{clinic.name}</p>
           </div>
           <div className="footer__legal">

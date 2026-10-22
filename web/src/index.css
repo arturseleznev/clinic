@@ -321,6 +321,11 @@ textarea:focus-visible {
   color: var(--slate);
 }
 
+.header__brand picture {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
 .header__logo {
   width: 44px;
   height: auto;
@@ -617,6 +622,12 @@ textarea:focus-visible {
   min-height: 220px;
   aspect-ratio: 16 / 11;
   background: var(--mist);
+}
+
+.hero__image-frame picture {
+  position: absolute;
+  inset: 0;
+  display: block;
 }
 
 .hero__image {
@@ -1130,8 +1141,14 @@ textarea:focus-visible {
   gap: 0.75rem;
 }
 
+.footer__brand picture {
+  flex-shrink: 0;
+  line-height: 0;
+}
+
 .footer__logo {
   width: 36px;
+  height: auto;
   flex-shrink: 0;
 }
 

@@ -48,11 +48,22 @@ export function Hero() {
           style={{ transitionDelay: '120ms' }}
         >
           <div className="hero__image-frame">
-            <img
-              src={assetUrl('/images/hero.jpg')}
-              alt="Интерьер стоматологической клиники"
-              className="hero__image"
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={`${assetUrl('/images/hero-800.webp')} 800w, ${assetUrl('/images/hero.webp')} 1600w`}
+                sizes="(max-width: 899px) 100vw, 55vw"
+              />
+              <img
+                src={assetUrl('/images/hero.jpg')}
+                alt="Интерьер стоматологической клиники"
+                className="hero__image"
+                width={1680}
+                height={1104}
+                decoding="async"
+                fetchPriority="high"
+              />
+            </picture>
           </div>
           <div className="hero__card">
             <span className="hero__card-label">Без страха и спешки</span>

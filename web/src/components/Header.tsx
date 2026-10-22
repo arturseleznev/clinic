@@ -63,7 +63,17 @@ export function Header() {
           aria-label="На главную"
           onClick={() => setMenuOpen(false)}
         >
-          <img src={assetUrl('/images/logo.png')} alt="" className="header__logo" />
+          <picture>
+            <source type="image/webp" srcSet={assetUrl('/images/logo.webp')} />
+            <img
+              src={assetUrl('/images/logo.png')}
+              alt=""
+              className="header__logo"
+              width={88}
+              height={88}
+              decoding="async"
+            />
+          </picture>
           <span className="header__brand-text">{clinic.shortName}</span>
         </Link>
 
