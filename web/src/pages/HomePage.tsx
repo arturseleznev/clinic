@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react'
 import { Hero } from '../components/Hero'
+import { YandexMap } from '../components/YandexMap'
 
 const About = lazy(() =>
   import('../components/About').then((m) => ({ default: m.About })),
@@ -13,9 +14,6 @@ const Services = lazy(() =>
 const Prices = lazy(() =>
   import('../components/Prices').then((m) => ({ default: m.Prices })),
 )
-const YandexMap = lazy(() =>
-  import('../components/YandexMap').then((m) => ({ default: m.YandexMap })),
-)
 
 export function HomePage() {
   return (
@@ -26,8 +24,8 @@ export function HomePage() {
         <Advantages />
         <Services />
         <Prices />
-        <YandexMap />
       </Suspense>
+      <YandexMap />
     </>
   )
 }
