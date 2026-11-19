@@ -67,14 +67,13 @@ export function Header() {
             <source type="image/webp" srcSet={assetUrl('/images/logo.webp')} />
             <img
               src={assetUrl('/images/logo.png')}
-              alt=""
+              alt={clinic.shortName}
               className="header__logo"
-              width={88}
-              height={88}
+              width={128}
+              height={128}
               decoding="async"
             />
           </picture>
-          <span className="header__brand-text">{clinic.shortName}</span>
         </Link>
 
         <nav className="header__nav" aria-label="Основная навигация">
