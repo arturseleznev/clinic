@@ -33,8 +33,7 @@ jobs:
       - name: Build
         working-directory: web
         env:
-          # Project Pages: https://user.github.io/REPO/
-          GITHUB_PAGES_BASE: /${{ github.event.repository.name }}/
+          GITHUB_PAGES_BASE: /
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
